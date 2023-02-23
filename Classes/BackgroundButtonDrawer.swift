@@ -104,7 +104,7 @@ public extension UIButton {
                                radius: CGFloat,
                                for state: UIControl.State)
     {
-        guard colors.isEmpty else { return }
+        guard !colors.isEmpty else { return }
         let drawer = ImageDrawer(content: .gradientColor(colors, locations, sPoint, ePoint))
         setImageDrawer(drawer, with: round, radius: radius, for: state)
     }

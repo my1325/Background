@@ -101,7 +101,7 @@ public extension UIView {
                                with round: UIRectCorner = .allCorners,
                                radius: CGFloat)
     {
-        guard colors.isEmpty else { return }
+        guard !colors.isEmpty else { return }
         let drawer = ImageDrawer(content: .gradientColor(colors, locations, sPoint, ePoint))
         setImageDrawer(drawer, with: round, radius: radius)
     }
