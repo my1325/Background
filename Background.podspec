@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
  s.name             = "Background"
- s.version           = "0.0.1"
+ s.version           = "0.0.2"
  s.summary         = "Background for my's ioser"
  s.homepage        = "https://github.com/my1325/Background.git"
  s.license            = "MIT"

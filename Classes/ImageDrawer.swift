@@ -167,6 +167,9 @@ extension ImageDrawer.AttributesStore {
                 context.setStrokeColor(color.cgColor)
             }
         }
+        if cornerRadius == -1 {
+            cornerRadius = rect.height * 0.5
+        }
         
         if let radius = cornerRadius, radius > 0, let corner = roundCorners, corner != .allCorners {
             return UIBezierPath(roundedRect: rect, byRoundingCorners: corner, cornerRadii: CGSize(width: radius, height: radius)).cgPath
