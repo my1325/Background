@@ -60,7 +60,12 @@ public final class BackgroundButtonDrawer {
     }
     
     public func redrawBackgroundForState(_ state: UIControl.State) {
-        guard size != .zero, let imageDrawer = stateDrawerCache[state.rawValue] else { return }
+        guard size.width != 0, size.height != 0,
+              let imageDrawer = stateDrawerCache[state.rawValue] 
+        else {
+            return
+        }
+
         if let image = stateImageCache[state.rawValue] {
             button.setBackgroundImage(image, for: state)
             return

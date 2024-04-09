@@ -65,7 +65,7 @@ public final class BackgroundViewDrawer {
     }
     
     private func redrawBackground() {
-        guard size != .zero else { return }
+        guard size.width != 0, size.height != 0 else { return }
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
         defer {
             UIGraphicsEndImageContext()
